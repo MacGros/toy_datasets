@@ -1,0 +1,3 @@
+nom,bloc,liant,module-elastique,coeff-poisson,res-compression,res-traction
+mur parement-mortier,pierre-parement,mortier,27,0.25,84,1.15
+mur interieure-mortier,pierre-interieur,mortier,41,0.25,116,1.15
