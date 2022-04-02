@@ -1,0 +1,71 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ecrm: <http://erlangen-crm.org/211015/> .
+@prefix lcrm: <http://local-crm.org/220402/> .
+
+@base <http://erlangen-crm.org/211015/> .
+
+<http://erlangen-crm.org/211015/> rdf:type owl:Ontology ;
+                                   owl:versionInfo "ECRM 211015 / CIDOC-CRM 7.1.1"^^xsd:string .
+
+
+###  http://erlangen-crm.org/211015/E1_CRM_Entity
+ecrm:E1_CRM_Entity rdf:type owl:Class ;
+                   rdfs:subClassOf owl:Thing ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty ecrm:P48_has_preferred_identifier ;
+                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                   ] ;
+                   rdfs:label "E1 CRM Entity"@en ;
+                   skos:notation "E1"^^xsd:string .
+
+###  http://erlangen-crm.org/211015/E41_Appellation
+ecrm:E41_Appellation rdf:type owl:Class ;
+                     # rdfs:subClassOf ecrm:E90_Symbolic_Object ;
+                     rdfs:label "E41 Appellation"@en ;
+                     skos:notation "E41"^^xsd:string .
+
+###  http://erlangen-crm.org/211015/E42_Identifier
+ecrm:E42_Identifier rdf:type owl:Class ;
+                    rdfs:subClassOf ecrm:E41_Appellation ;
+                    rdfs:label "E42 Identifier"@en ;
+                    skos:notation "E42"^^xsd:string .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://erlangen-crm.org/211015/P48_has_preferred_identifier
+ecrm:P48_has_preferred_identifier rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf ecrm:P1_is_identified_by ;
+                                  owl:inverseOf ecrm:P48i_is_preferred_identifier_of ;
+                                  rdfs:range ecrm:E42_Identifier ;
+                                  rdfs:label "P48 has preferred identifier"@en ;
+                                  skos:notation "P48"^^xsd:string .
+
+
+###  http://erlangen-crm.org/211015/P48i_is_preferred_identifier_of
+ecrm:P48i_is_preferred_identifier_of rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf ecrm:P1i_identifies ;
+                                     rdfs:domain ecrm:E42_Identifier ;
+                                     rdfs:label "P48 is preferred identifier of"@en ;
+                                     skos:notation "P48i"^^xsd:string .
+
+
+###  http://erlangen-crm.org/211015/P1_is_identified_by
+ecrm:P1_is_identified_by rdf:type owl:ObjectProperty ;
+                         owl:inverseOf ecrm:P1i_identifies ;
+                         rdfs:domain ecrm:E1_CRM_Entity ;
+                         rdfs:range ecrm:E41_Appellation ;
+                         rdfs:label "P1 is identified by"@en ;
+                         skos:notation "P1"^^xsd:string .
+
+
+###  http://erlangen-crm.org/211015/P1i_identifies
+ecrm:P1i_identifies rdf:type owl:ObjectProperty ;
+                    rdfs:domain ecrm:E41_Appellation ;
+                    rdfs:range ecrm:E1_CRM_Entity ;
+                    rdfs:label "P1 identifies"@en ;
+                    skos:notation "P1i"^^xsd:string .
