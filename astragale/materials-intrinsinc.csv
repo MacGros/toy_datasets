@@ -1,0 +1,14 @@
+uri,material_name,type_material,density,elastic_modulus,res_compression,res_traction
+ark:/77777/mat-0Km2GM,abricot,bloc,10.233688 ,11.450359 ,66.541149 ,22.075478 
+ark:/77777/mat-kjo7Sl,roux-blond,liant,10.732575 ,9.597776 ,71.396896 ,20.680501 
+ark:/77777/mat-cEzUbu,creme-patissiere,liant,12.230763 ,12.317979 ,67.777564 ,26.274554 
+ark:/77777/mat-LMCKlq,speculos,liant,7.029344 ,16.565303 ,70.247860 ,17.225840 
+ark:/77777/mat-KA6Ui4,amande,bloc,13.978824 ,8.582115 ,67.663648 ,14.624862 
+ark:/77777/mat-HbdKeB,datte,bloc,12.922371 ,8.417346 ,71.053943 ,21.979876 
+ark:/77777/mat-5Z5DgF,kaki,bloc,11.222270 ,9.948280 ,72.599356 ,25.059640 
+ark:/77777/mat-UXzBV4,clementine,bloc,8.071151 ,10.907271 ,73.762502 ,17.066896 
+ark:/77777/mat-d67jda,griotte,bloc,9.560456 ,7.663843 ,75.025673 ,17.516763 
+ark:/77777/mat-fmYKeR,combava,bloc,10.057452 ,13.849144 ,68.877474 ,12.221885 
+ark:/77777/mat-OaIFoW,hassaku,bloc,6.484687 ,8.568758 ,67.847627 ,19.409096 
+ark:/77777/mat-FcEifG,creme-chiboust,liant,7.901051 ,3.783379 ,72.788199 ,20.777365 
+ark:/77777/mat-PlOqz7,guimauve,liant,10.978824 ,7.582115 ,75.663648 ,15.624862
